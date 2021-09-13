@@ -60,7 +60,7 @@ export const MeetingBingoTab = () => {
     const [frameContext, setFrameContext] = useState<microsoftTeams.FrameContexts | null>();
     const [onlineMeeting, setOnlineMeeting] = useState<OnlineMeeting>({});
     const [bingoTopics, setBingoTopics] = useState<string[]>([]);
-    const [currentUserId, setcurrentUserId] = useState<string>();
+    const [currentUserId, setCurrentUserId] = useState<string>();
     const [newTopicValue, setNewTopicValue] = useState<string>();
     const [showAddTopicForm, setShowAddTopicForm] = useState<boolean>(false);
     const [bingoGrid, setBingoGrid] = useState<{ selected: boolean; value: string; }[][]>([[]]);
@@ -111,7 +111,7 @@ export const MeetingBingoTab = () => {
                 successCallback: (token: string) => {
                     const decoded: { [key: string]: any; } = jwtDecode(token) as { [key: string]: any; };
                     setAccessToken(token);
-                    setcurrentUserId(decoded.oid);
+                    setCurrentUserId(decoded.oid);
                     setErrors(errs => removeError(errs, Errors.SSOError));
                     microsoftTeams.appInitialization.notifySuccess();
                 },
