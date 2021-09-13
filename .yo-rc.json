@@ -1,0 +1,12 @@
+{
+  "generator-teams": {
+    "promptValues": {
+      "developer": "KEOS",
+      "unitTestsEnabled": false,
+      "lintingSupport": true,
+      "useAzureAppInsights": false
+    },
+    "libraryName": "meetingBingo",
+    "generator-version": "3.2.0"
+  }
+}
